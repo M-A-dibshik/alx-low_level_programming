@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - Entry point
  *
@@ -22,7 +21,7 @@ int main(void)
 	}
 
 	/*prints A - Z*/
-	while (CH <= 'Z')
+	while ( CH <= 'Z')
 	{
 		putchar(CH);
 		CH++;
@@ -30,4 +29,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-{
+}
