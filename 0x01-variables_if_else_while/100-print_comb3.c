@@ -11,9 +11,9 @@
 
 int main(void)
 {
-	int digit1 = 0, gigit2;
+	int digit1 = 0, digit2;
 
-	while (digit <= 9)
+	while (digit1 <= 9)
 	{
 		(digit2 = 0);
 		while (digit2 <= 9)
@@ -33,7 +33,7 @@ int main(void)
 		}
 		digit1++;
 	}
-	putchar('\n')
+	putchar('\n');
 
 	return (0);
 }
