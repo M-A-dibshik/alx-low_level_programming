@@ -14,7 +14,7 @@ int main(void)
 
 	while (digit <= 102) /*102; decimal rep of f*/
 	{
-	`	putchar(digit);
+		putchar(digit);
 
 		/* after 9 we jump till 96; `*/
 		if (digit == 57)
