@@ -5,9 +5,10 @@
  *			the alphabet a - z
 */
 
+
 void print_alphabet(void)
 {
-	int print_alphabet;
+	int ch;
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 		_putchar(ch);
