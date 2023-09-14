@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
- * more_numbers - print 0 - 14 ten times and you
- *		can only use _putchar three times
+ * print_diagonal - print a diagonal line
  *
- * Return: 0 (Success)
+ * @n: is the number of times the \ cdaracter
+ *	should be printed
 */
-void more_numbers(void)
-{
-	int num, row, count;
 
-	for (row = 1; row <= 10; row++)
-	{
-		for (count = 0; count <= 14; count++)
-		{
-			num = count;
-			if (count > 9)
-			{
-				_putchar(1 + 48);
-				num = count % 10;
-			}
-			_putchar(num + 48);
-		}
+void Print_diagonal(int n)
+{
+	int postn, space;
+
+	if (n <= 0)
 		_putchar('\n');
+	else
+	{
+		for (postn = 1; postn <= n; postn++
+		{
+			for (space = 1; space <= postn; space++)
+				_putchar(' ');
+			_putchar(92); /*is equel to '/' char*/
+			_putchar('\n');
+		}
 	}
 }
