@@ -2,7 +2,7 @@
 
 /**
  * more_numbers - print 0 - 14 ten times and you
- *              can only use _putchar three times
+ *		can only use _putchar three times
  *
  * Return: 0 (Success)
 */
@@ -22,6 +22,6 @@ void more_numbers(void)
 			}
 			_putchar(num + 48);
 		}
-		_putchar('\n')
+		_putchar('\n');
 	}
 }
