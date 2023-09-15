@@ -5,7 +5,7 @@
  *
  * @size: size of the triangle
  *
- * Retrun: Always 9 (Success)
+ * Retrun: Always 0 (Success)
 */
 
 void print_triangle(int size)
