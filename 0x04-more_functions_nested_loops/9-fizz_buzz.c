@@ -24,6 +24,7 @@ int main(void)
 			printf("FizzBizz");
 		else
 			printf("%d", num);
+
 		if (num != 100)
 			printf(" ");
 		else
