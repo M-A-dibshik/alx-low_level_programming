@@ -3,7 +3,7 @@
 /**
  * main - print numbers 1 - 100 followed by a new line
  *	numbers that are multiples if 3 print Fizz
- *	numbers that are multiples if 5 print Bizz
+ *	numbers that are multiples if 5 print Buzz
  *	numbers that are multiples if 3 and 5 print FizzBuzz
  *	each number and word to be separated by space
  *
@@ -19,9 +19,9 @@ int main(void)
 		if (num % 3 == 0 && !(num % 5 == 0))
 			printf("Fizz");
 		else if (num % 5 == 0 && !(num % 3 == 0))
-			printf("Bizz");
+			printf("Buzz");
 		else if (num % 3 == 0 && num % 5 == 0)
-			printf("FizzBizz");
+			printf("FizzBuzz");
 		else
 			printf("%d", num);
 
