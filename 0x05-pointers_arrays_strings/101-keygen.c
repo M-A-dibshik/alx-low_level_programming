@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int sun;
+	int sum;
 	char c;
 
 	srand(time(NULL));
@@ -18,6 +18,6 @@ int main(void)
 		sum += c;
 		putchar(c);
 	}
-	putcher(2772 - sum);
+	putchar(2772 - sum);
 	return (0);
 }
