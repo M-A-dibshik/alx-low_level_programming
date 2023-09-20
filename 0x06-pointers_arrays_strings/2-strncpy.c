@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - unction that copies a string
+ * _strncpy - A function that copies a string
  *
  * @dest: input value
  * @src: input value
@@ -10,7 +10,7 @@
  * Return: dest
 */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
