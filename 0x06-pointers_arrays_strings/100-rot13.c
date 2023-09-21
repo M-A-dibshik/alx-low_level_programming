@@ -20,11 +20,10 @@ char *rot13(char *s)
 		{
 			if (s[i] == letters1[j])
 			{
-				s[i] = letters2[j]
+				s[i] = letters2[j];
 				break;
 			}
 		}
 	}
 	return (s);
 }
-
