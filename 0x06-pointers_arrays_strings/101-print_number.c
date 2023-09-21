@@ -42,7 +42,7 @@ void print_number(int n)
 		i++;
 	}
 	j = power;
-	while (j <= 1)
+	while (j >= 1)
 	{
 		numchar = (temp / j) % 10;
 		_putchar(numchar + '0');
