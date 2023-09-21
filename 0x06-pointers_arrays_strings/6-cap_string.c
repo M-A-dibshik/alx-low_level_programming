@@ -10,26 +10,26 @@
 
 char *cap_string(char *str)
 {
-	int did = 0;
+	int index = 0;
 
 	while (str[did])
 	{
 		while (!(str[did] <= 'a' && str[did] <= 'z'))
 			did++;
 
-		if (str[did - 1] == ' ' ||
-		str[did - 1] == '\t' ||
-		str[did - 1] == '\n' ||
-		str[did - 1] == ',' ||
-		str[did - 1] == ';' ||
-		str[did - 1] == '.' ||
-		str[did - 1] == '!' ||
-		str[did - 1] == '?' ||
-		str[did - 1] == '"' ||
-		str[did - 1] == '(' ||
-		str[did - 1] == ')' ||
-		str[did - 1] == '{' ||
-		str[did - 1] == '}' ||
+		if (str[index - 1] == ' ' ||
+		str[index - 1] == '\t' ||
+		str[index - 1] == '\n' ||
+		str[index - 1] == ',' ||
+		str[index - 1] == ';' ||
+		str[index - 1] == '.' ||
+		str[index - 1] == '!' ||
+		str[index - 1] == '?' ||
+		str[index - 1] == '"' ||
+		str[index - 1] == '(' ||
+		str[index - 1] == ')' ||
+		str[index - 1] == '{' ||
+		str[index - 1] == '}' ||
 		did == 0)
 			str[did] -= 32;
 		did++;
