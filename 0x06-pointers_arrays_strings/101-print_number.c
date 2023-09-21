@@ -12,7 +12,7 @@ void print_number(int n)
 	unsigned int i = n;
 
 	if (n < 0)
-	{	
+	{
 		_putchar(45);
 		i = -i;
 	}
