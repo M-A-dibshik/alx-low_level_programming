@@ -28,7 +28,7 @@ int op_sub(int a, int b)
  * @b: the second int
  * Return: the remainder
 */
-int op_mod (int a, int b)
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
