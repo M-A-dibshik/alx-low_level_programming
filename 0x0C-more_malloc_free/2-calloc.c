@@ -1,10 +1,13 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * *_memset - fills memory with a constant byte
  * @s: pointer to put constant
  * @b: constant
- * @n: max bytes
+ * @n: max bytes to use
  * Return: s
 */
 
