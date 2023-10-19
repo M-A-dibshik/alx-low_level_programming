@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - prints a string followed by a new line
+ * _puts - prints a string, followed by a new line
  * @str: pointer to the string to print
  * Return: void
 */
@@ -42,7 +42,8 @@ int _atoi(const char *s)
 		resp *= 10;
 		resp += (s[i] - 48);
 	}
-	return (sign = resp);
+
+	return (sign * resp);
 }
 
 /**
