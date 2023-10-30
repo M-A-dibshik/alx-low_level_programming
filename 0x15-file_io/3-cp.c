@@ -6,8 +6,6 @@
 #define ERR_NOCLOSE "Error: can't close fd %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
-int main(int ac, char **av);
-
 /**
  * main - program
  * @ac: argument count
@@ -18,7 +16,7 @@ int main(int ac, char **av);
 int main(int ac, char **av)
 {
 	int from_fd = 0, to_fd = 0;
-	ssize_t i;
+	ssize_t b;
 	char buf[READ_BUF_SIZE];
 
 	if (ac != 3)
@@ -30,8 +28,8 @@ int main(int ac, char **av)
 	if (to_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 
-	while ((i = read(from_fd, buf, READ_BUF_SIZE)) > 0)
-		if (write(to_fd, buf, i) != i)
+	while ((b = read(from_fd, buf, READ_BUF_SIZE)) > 0)
+		if (write(to_fd, buf, b) != b)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 	if (i == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
