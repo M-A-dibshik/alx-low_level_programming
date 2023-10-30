@@ -6,6 +6,8 @@
 #define ERR_NOCLOSE "Error: can't close fd %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
+int main(int ac, char **av);
+
 /**
  * main - program
  * @ac: argument count
