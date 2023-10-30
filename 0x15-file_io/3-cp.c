@@ -10,7 +10,7 @@
  * main - program
  * @ac: argument count
  * @av: argument vector
- * Return: 1 on success and -1 on failure
+ * Return: 1 on success and 0 on failure
 */
 
 int main(int ac, char **av)
