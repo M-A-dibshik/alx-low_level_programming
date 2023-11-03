@@ -38,6 +38,91 @@ void print_class(Elf64_Ehdr h)
 }
 
 /**
+ * print_data - print ELF data
+ * @h: the ELF header struct
+*/
+void print_data(Elf64_Ehdr h)
+{
+	printf("  Data:                              ");
+	switch (h.e_ident[EI_DATA])
+	{
+		case ELFDATA2MSB:
+			printf("2's complement, big endian");
+			break;
+		case ELFDATA2LSB:
+			printf("2's complement, little endian");
+			break;
+		case ELFDATANONE:
+			printf("none");
+			break;
+	}
+	printf("\n");
+}
+
+/**
+ * print_version - pritns ELF version
+ * @h: the ELF header struct
+*/
+void print_version(Elf64_Ehdr h)
+{
+	printf("  Version:                           %d", h.e_ident[EI_VERSION]);
+	switch (h.e_ident[EI_VERSION])
+	{
+		case EV_CURRENT:
+			printf(" (current)");
+			break;
+		case EV_NONE:
+			printf("%s","");
+			break;
+		break;
+	}
+	printf("\n");
+}
+
+/**
+ * print_osabi - prints ELF osabi
+ * @h: the ELF header struct
+*/
+void print_osabi(Elf64_Ehdr h)
+{
+	printf("  OS/ABI:                            ");
+	switch (h.e_ident[EI_OSABI])
+	{
+		case ELFOSABI_NONE:
+			printf("UNIX - System V");
+			break;
+		case ELFOSABI_HPUX:
+			printf("UNIX _ HP-UX");
+			break;
+		case ELFOSABI_NETBSD:
+			printf("UNIX - NetBSD");
+			break;
+		case ELFOSABI_LINUX:
+			printf("UNIX - Linux");
+			break;
+		case ELFOSABI_SOLARIS:
+			printf("UNIX - Solaris");
+			break;
+		case ELFOSABI_AIX:
+			printf("UNIX  - AIX");
+			break;
+		case ELFOSABI_IRIX:
+			printf("UNIX - IRIX");
+			break;
+		case ELFOSABI_FREEBSD:
+			printf("UNIX - FreeBSD");
+			break;
+		case ELFOSABI_TRU64:
+			printf("UNIX - TRU64");
+			break;
+		default:
+			print_osabi_more(h);
+			break;
+	}
+	printf("\n");
+}
+
+/**
  * print_osabi_more - prints SLF osabi more
  * @h: the ELF header struct
 */
@@ -52,13 +137,13 @@ void print_osabi_more(Elf64_Ehdr h)
 			printf("UNIX - OpenBSD");
 			break;
 		case ELFOSABI_STANDALONE:
-			pritnf("Standalone App");
+			printf("Standalone App");
 			break;
 		case ELFOSABI_ARM:
 			printf("ARM");
 			break;
 		default:
-			pritnf("<unknown: %x>", h.e_ident[EI_OSABI]);
+			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
 		break;
 	}
 }
@@ -69,7 +154,7 @@ void print_osabi_more(Elf64_Ehdr h)
 */
 void print_abiversion(Elf64_Ehdr h)
 {
-	pritnf("  ABI Version:                       %d\n",
+	printf("  ABI Version:                       %d\n",
 			h.e_ident[EI_ABIVERSION]);
 }
 
@@ -88,7 +173,7 @@ void print_type(Elf64_Ehdr h)
 	switch (p[i])
 	{
 		case ET_NONE:
-			pritnf("NONE (None)");
+			printf("NONE (None)");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)");
