@@ -1,4 +1,5 @@
 #include "main.h"
+#include <elf.h>
 
 void print_osabi_more(Elf64_Ehdr h);
 
@@ -26,13 +27,13 @@ void print_class(Elf64_Ehdr h)
 	{
 		case ELFCLASS64:
 			printf("ELF64");
-			break;
+		break;
 		case ELFCLASS32:
 			printf("ELF32");
-			break;
+		break;
 		case ELFCLASSNONE:
 			printf("none");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -48,13 +49,13 @@ void print_data(Elf64_Ehdr h)
 	{
 		case ELFDATA2MSB:
 			printf("2's complement, big endian");
-			break;
+		break;
 		case ELFDATA2LSB:
 			printf("2's complement, little endian");
-			break;
+		break;
 		case ELFDATANONE:
 			printf("none");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -70,10 +71,10 @@ void print_version(Elf64_Ehdr h)
 	{
 		case EV_CURRENT:
 			printf(" (current)");
-			break;
+		break;
 		case EV_NONE:
 			printf("%s", "");
-			break;
+		break;
 		break;
 	}
 	printf("\n");
@@ -144,7 +145,7 @@ void print_osabi_more(Elf64_Ehdr h)
 			break;
 		default:
 			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
-		break;
+			break;
 	}
 }
 
@@ -253,6 +254,7 @@ int main(int ac, char **av)
 	}
 	else
 		dprintf(STDERR_FILENO, "Not ELF file: %s\n", av[1]), exit(98);
+
 	print_magic(h);
 	print_class(h);
 	print_data(h);

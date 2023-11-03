@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <elf.h>
 
 #define BUFFER_SIZE 1024
 
