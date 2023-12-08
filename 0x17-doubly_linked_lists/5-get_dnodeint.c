@@ -2,7 +2,7 @@
 /**
  * get_dnodeint_at_index - return at given index
  * @head: pointer to current head node
- * #index: index of node to return
+ * @index: index of node to return
  * Return: adderss of node at index
 */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
