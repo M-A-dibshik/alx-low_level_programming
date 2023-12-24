@@ -9,7 +9,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *elm;
-	char flag = 0;
+	char flag = 0; /* 0 while no data has been printed yet */
 
 	if (ht == NULL || ht->array == NULL)
 		return;
